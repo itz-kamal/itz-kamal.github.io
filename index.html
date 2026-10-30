@@ -1,0 +1,1380 @@
+<!doctype html>
+<html lang="en" class="scroll-smooth">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kamaldeen Ojure | Full Stack Developer &amp; Cyber Security</title>
+    <meta
+      name="description"
+      content="Kamaldeen Ojure — Full stack developer with 3+ years building secure, production-grade web applications and APIs. MSc IT with Cyber Security, Robert Gordon University."
+    />
+    <meta
+      property="og:title"
+      content="Kamaldeen Ojure | Full Stack Developer &amp; Cyber Security"
+    />
+    <meta
+      property="og:description"
+      content="Secure, production-grade web apps and APIs. PHP/Laravel, C#/.NET, TypeScript/Next.js, Python."
+    />
+    <meta property="og:type" content="website" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><rect width='100' height='100' rx='22' fill='%230f172a'/><text x='50' y='66' font-size='46' text-anchor='middle' fill='%2322d3ee' font-family='Arial' font-weight='bold'>KO</text></svg>"
+    />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: ["Inter", "ui-sans-serif", "system-ui", "sans-serif"],
+              mono: ['"JetBrains Mono"', "ui-monospace", "monospace"],
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        background: #ffffff;
+      }
+      .grid-bg {
+        background-image:
+          linear-gradient(rgba(15, 23, 42, 0.05) 1px, transparent 1px),
+          linear-gradient(90deg, rgba(15, 23, 42, 0.05) 1px, transparent 1px);
+        background-size: 48px 48px;
+        mask-image: radial-gradient(ellipse at top, black 30%, transparent 75%);
+        -webkit-mask-image: radial-gradient(
+          ellipse at top,
+          black 30%,
+          transparent 75%
+        );
+      }
+      .gradient-text {
+        background: linear-gradient(90deg, #0891b2, #4f46e5);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+      }
+      .card {
+        background: #ffffff;
+        border: 1px solid #e2e8f0;
+        box-shadow: 0 1px 2px rgba(15, 23, 42, 0.04);
+        transition:
+          transform 0.25s ease,
+          border-color 0.25s ease,
+          box-shadow 0.25s ease;
+      }
+      .card:hover {
+        transform: translateY(-4px);
+        border-color: rgba(8, 145, 178, 0.4);
+        box-shadow: 0 20px 40px -20px rgba(15, 23, 42, 0.18);
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(24px);
+        transition:
+          opacity 0.7s ease,
+          transform 0.7s ease;
+      }
+      .reveal.visible {
+        opacity: 1;
+        transform: none;
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .reveal {
+          opacity: 1;
+          transform: none;
+          transition: none;
+        }
+        .card,
+        .card:hover {
+          transition: none;
+          transform: none;
+        }
+      }
+      .nav-link.active {
+        color: #0891b2;
+      }
+    </style>
+  </head>
+
+  <body
+    class="font-sans text-slate-700 antialiased selection:bg-cyan-400/30 selection:text-slate-900"
+  >
+    <header
+      id="navbar"
+      class="fixed inset-x-0 top-0 z-50 transition-all duration-300"
+    >
+      <nav
+        class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4"
+      >
+        <a
+          href="#home"
+          class="flex items-center gap-2 font-bold text-slate-900"
+        >
+          <span
+            class="grid h-9 w-9 place-items-center rounded-lg bg-slate-900 text-sm text-white"
+            >KO</span
+          >
+          <span class="hidden sm:inline">Kamaldeen Ojure</span>
+        </a>
+
+        <ul class="hidden items-center gap-8 text-sm font-medium md:flex">
+          <li>
+            <a href="#projects" class="nav-link hover:text-cyan-600 transition"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="nav-link hover:text-cyan-600 transition"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="nav-link hover:text-cyan-600 transition"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a href="#education" class="nav-link hover:text-cyan-600 transition"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a href="#contact" class="nav-link hover:text-cyan-600 transition"
+              >Contact</a
+            >
+          </li>
+        </ul>
+
+        <div class="flex items-center gap-3">
+          <a
+            href="assets/Kamaldeen_Ojure_CV.pdf"
+            download
+            class="hidden items-center gap-2 rounded-lg border border-cyan-600/40 px-4 py-2 text-sm font-semibold text-cyan-700 transition hover:bg-cyan-400/10 sm:inline-flex"
+          >
+            <svg
+              class="h-4 w-4"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+              />
+            </svg>
+            CV
+          </a>
+          <button
+            id="menuBtn"
+            class="rounded-lg p-2 text-slate-700 hover:bg-slate-100 md:hidden"
+            aria-label="Open menu"
+            aria-expanded="false"
+          >
+            <svg
+              class="h-6 w-6"
+              fill="none"
+              stroke="currentColor"
+              stroke-width="2"
+              viewBox="0 0 24 24"
+            >
+              <path stroke-linecap="round" d="M4 6h16M4 12h16M4 18h16" />
+            </svg>
+          </button>
+        </div>
+      </nav>
+
+      <div
+        id="mobileMenu"
+        class="hidden border-t border-slate-200 bg-white/95 backdrop-blur md:hidden"
+      >
+        <ul class="flex flex-col gap-1 px-6 py-4 text-sm font-medium">
+          <li>
+            <a
+              href="#projects"
+              class="block rounded px-2 py-2 hover:bg-slate-100"
+              >Projects</a
+            >
+          </li>
+          <li>
+            <a
+              href="#experience"
+              class="block rounded px-2 py-2 hover:bg-slate-100"
+              >Experience</a
+            >
+          </li>
+          <li>
+            <a href="#skills" class="block rounded px-2 py-2 hover:bg-slate-100"
+              >Skills</a
+            >
+          </li>
+          <li>
+            <a
+              href="#education"
+              class="block rounded px-2 py-2 hover:bg-slate-100"
+              >Education</a
+            >
+          </li>
+          <li>
+            <a
+              href="#contact"
+              class="block rounded px-2 py-2 hover:bg-slate-100"
+              >Contact</a
+            >
+          </li>
+          <li>
+            <a
+              href="assets/Kamaldeen_Ojure_CV.pdf"
+              download
+              class="mt-2 block rounded bg-cyan-600 px-2 py-2 text-center font-semibold text-slate-900"
+              >Download CV</a
+            >
+          </li>
+        </ul>
+      </div>
+    </header>
+
+    <main>
+      <!-- ============ HERO ============ -->
+      <section
+        id="home"
+        class="relative overflow-hidden pt-36 pb-24 md:pt-44 md:pb-32"
+      >
+        <div class="grid-bg pointer-events-none absolute inset-0"></div>
+        <div
+          class="pointer-events-none absolute -top-40 left-1/2 h-[500px] w-[800px] -translate-x-1/2 rounded-full bg-cyan-500/10 blur-3xl"
+        ></div>
+        <div
+          class="pointer-events-none absolute top-40 right-0 h-72 w-72 rounded-full bg-indigo-500/10 blur-3xl"
+        ></div>
+
+        <div class="relative mx-auto max-w-6xl px-6">
+          <div class="reveal">
+            <h1
+              class="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-slate-900 sm:text-6xl md:text-7xl"
+            >
+              Hi, I'm Kamaldeen.<br />
+              I build secure software.
+            </h1>
+
+            <p class="mt-6 max-w-2xl text-lg leading-relaxed text-slate-600">
+              Full stack developer with
+              <span class="text-slate-900">3+ years</span> shipping
+              production-grade web applications and APIs — payment platforms,
+              learning management systems and assessment tools — with an
+              <span class="text-slate-900">MSc in IT with Cyber Security</span>
+              and a security-first mindset.
+            </p>
+
+            <div class="mt-10 flex flex-wrap gap-4">
+              <a
+                href="assets/Kamaldeen_Ojure_CV.pdf"
+                download
+                class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:opacity-90"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+                  />
+                </svg>
+                Download CV
+              </a>
+              <a
+                href="#projects"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-100 px-6 py-3 font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-200"
+              >
+                View Projects
+                <svg
+                  class="h-4 w-4"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 8l4 4m0 0l-4 4m4-4H3"
+                  />
+                </svg>
+              </a>
+            </div>
+
+            <div class="mt-8 flex items-center gap-5 text-slate-600">
+              <a
+                href="https://github.com/itz-kamal"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub"
+                class="transition hover:text-slate-900"
+              >
+                <svg class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                  <path
+                    d="M12 .5C5.73.5.67 5.56.67 11.83c0 5 3.24 9.25 7.74 10.75.57.1.78-.25.78-.55v-1.93c-3.15.69-3.81-1.52-3.81-1.52-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.74.4-1.24.72-1.52-2.51-.29-5.16-1.26-5.16-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .96-.31 3.13 1.16a10.9 10.9 0 0 1 5.7 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.5-1.5 7.73-5.75 7.73-10.75C23.33 5.56 18.27.5 12 .5z"
+                  />
+                </svg>
+              </a>
+              <a
+                href="mailto:kamalojure@gmail.com"
+                aria-label="Email"
+                class="transition hover:text-slate-900"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </a>
+              <span class="h-px w-12 bg-slate-300"></span>
+              <span class="font-mono text-sm">kamalojure@gmail.com</span>
+            </div>
+          </div>
+
+          <!-- Stats -->
+          <div class="reveal mt-20 grid grid-cols-2 gap-4 md:grid-cols-4">
+            <div class="card rounded-2xl p-6">
+              <p class="text-3xl font-bold text-slate-900">3+</p>
+              <p class="mt-1 text-sm text-slate-600">
+                Years full stack development
+              </p>
+            </div>
+            <div class="card rounded-2xl p-6">
+              <p class="text-3xl font-bold text-slate-900">3</p>
+              <p class="mt-1 text-sm text-slate-600">Live platforms shipped</p>
+            </div>
+            <div class="card rounded-2xl p-6">
+              <p class="text-3xl font-bold text-slate-900">30,974</p>
+              <p class="mt-1 text-sm text-slate-600">
+                CVEs analysed in MSc research
+              </p>
+            </div>
+            <div class="card rounded-2xl p-6">
+              <p class="text-3xl font-bold">84.2%</p>
+              <p class="mt-1 text-sm text-slate-600">
+                Exploited CVEs caught in top 5%
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ PROJECTS ============ -->
+      <section id="projects" class="border-t border-slate-200 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal">
+            <p class="font-mono text-sm text-cyan-600">01 · Projects</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Selected work
+            </h2>
+            <p class="mt-3 max-w-2xl text-slate-600">
+              Live production platforms and open-source research. Click through
+              to see them in action.
+            </p>
+          </div>
+
+          <!-- Featured project -->
+          <article class="card reveal mt-12 overflow-hidden rounded-3xl">
+            <div class="grid md:grid-cols-5">
+              <div class="p-8 md:col-span-3 md:p-10">
+                <div class="flex items-center gap-3">
+                  <span
+                    class="rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-700"
+                    >Featured · MSc Dissertation</span
+                  >
+                  <span
+                    class="rounded-full bg-slate-100 px-3 py-1 text-xs text-slate-600"
+                    >Open source</span
+                  >
+                </div>
+                <h3 class="mt-5 text-2xl font-bold text-slate-900 md:text-3xl">
+                  Risk-Based Vulnerability Prioritisation Tool
+                </h3>
+                <p class="mt-4 leading-relaxed text-slate-600">
+                  Tells security teams which vulnerabilities to fix first. Feed
+                  in a list of CVEs and the pipeline enriches each one with
+                  severity (CVSS), exploit probability (EPSS) and
+                  confirmed-exploitation status (CISA KEV), then returns a
+                  ranked remediation queue with a patch-by deadline for every
+                  CVE — immediate for KEV, then 7, 30, 90 or 180 days.
+                </p>
+                <p class="mt-3 leading-relaxed text-slate-600">
+                  Three-stage pipeline (data collection → statistical analysis →
+                  priority ranking) with rate-limited, batched calls to the NVD
+                  and EPSS APIs, data-quality checks and fully reproducible
+                  command-line runs.
+                </p>
+                <div class="mt-6 flex flex-wrap gap-2 font-mono text-xs">
+                  <span class="rounded bg-slate-100 px-2 py-1">Python</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">requests</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">pandas</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">SciPy</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">Matplotlib</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">NVD API</span
+                  ><span class="rounded bg-slate-100 px-2 py-1">EPSS API</span>
+                </div>
+                <a
+                  href="https://github.com/itz-kamal/vulnerability_analysis"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="mt-8 inline-flex items-center gap-2 rounded-lg bg-slate-900 px-5 py-2.5 text-sm font-semibold text-white transition hover:bg-slate-300"
+                >
+                  <svg class="h-4 w-4" fill="currentColor" viewBox="0 0 24 24">
+                    <path
+                      d="M12 .5C5.73.5.67 5.56.67 11.83c0 5 3.24 9.25 7.74 10.75.57.1.78-.25.78-.55v-1.93c-3.15.69-3.81-1.52-3.81-1.52-.52-1.31-1.26-1.66-1.26-1.66-1.03-.7.08-.69.08-.69 1.14.08 1.74 1.17 1.74 1.17 1.01 1.74 2.66 1.24 3.31.95.1-.74.4-1.24.72-1.52-2.51-.29-5.16-1.26-5.16-5.6 0-1.24.44-2.25 1.17-3.04-.12-.29-.51-1.44.11-3 0 0 .96-.31 3.13 1.16a10.9 10.9 0 0 1 5.7 0c2.17-1.47 3.12-1.16 3.12-1.16.62 1.56.23 2.71.11 3 .73.79 1.17 1.8 1.17 3.04 0 4.35-2.65 5.31-5.17 5.59.41.35.77 1.04.77 2.1v3.11c0 .3.21.66.79.55 4.5-1.5 7.73-5.75 7.73-10.75C23.33 5.56 18.27.5 12 .5z"
+                    />
+                  </svg>
+                  View on GitHub
+                </a>
+              </div>
+
+              <!-- Results panel -->
+              <div
+                class="border-t border-slate-200 bg-slate-50 p-8 md:col-span-2 md:border-l md:border-t-0 md:p-10"
+              >
+                <p
+                  class="font-mono text-xs uppercase tracking-wider text-slate-500"
+                >
+                  Validation · 30,974 CVEs (2023)
+                </p>
+                <div class="mt-6 space-y-6">
+                  <div>
+                    <div class="flex items-baseline justify-between text-sm">
+                      <span class="text-slate-700"
+                        >This tool — top 5% of queue</span
+                      >
+                      <span class="font-bold text-emerald-700">84.2%</span>
+                    </div>
+                    <div class="mt-2 h-2.5 rounded-full bg-slate-100">
+                      <div
+                        class="h-2.5 rounded-full bg-gradient-to-r from-emerald-400 to-cyan-400"
+                        style="width: 84.2%"
+                      ></div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="flex items-baseline justify-between text-sm">
+                      <span class="text-slate-700"
+                        >CVSS-only ranking — top 5%</span
+                      >
+                      <span class="font-bold text-slate-600">9.7%</span>
+                    </div>
+                    <div class="mt-2 h-2.5 rounded-full bg-slate-100">
+                      <div
+                        class="h-2.5 rounded-full bg-slate-500"
+                        style="width: 9.7%"
+                      ></div>
+                    </div>
+                  </div>
+                  <p class="text-sm leading-relaxed text-slate-500">
+                    Share of confirmed-exploited CVEs captured in the top 5% of
+                    each ranking. CVSS alone correlated only weakly with
+                    exploitation likelihood (<span
+                      class="font-mono text-slate-700"
+                      >r = 0.155</span
+                    >).
+                  </p>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Live platforms -->
+          <h3
+            class="reveal mt-16 flex items-center gap-3 text-lg font-semibold text-slate-900"
+          >
+            <span class="h-2 w-2 rounded-full bg-emerald-400"></span> Live
+            production platforms
+          </h3>
+          <div class="mt-6 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+            <article class="card reveal flex flex-col rounded-2xl p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-cyan-400/10 px-3 py-1 text-xs font-semibold text-cyan-700"
+                  >Live · FinTech</span
+                >
+                <a
+                  href="https://myequalx.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit myequalx.com"
+                  class="text-slate-500 transition hover:text-cyan-700"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                myequalx.com
+              </h3>
+              <p class="text-sm text-cyan-700/80">
+                Gift Card Trading &amp; Bills Payment Platform
+              </p>
+              <p class="mt-4 flex-1 leading-relaxed text-slate-600">
+                Live production platform for secure trading and payments.
+                C#/.NET backend with secure payment gateway integration and
+                multi-login prevention, plus a Next.js/TypeScript frontend built
+                for scalability and reliable transaction handling.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                <span class="rounded bg-slate-100 px-2 py-1">C# / .NET</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Next.js</span
+                ><span class="rounded bg-slate-100 px-2 py-1">TypeScript</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Payments</span>
+              </div>
+              <a
+                href="https://myequalx.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >Visit site <span aria-hidden="true">→</span></a
+              >
+            </article>
+
+            <article class="card reveal flex flex-col rounded-2xl p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-semibold text-indigo-700"
+                  >Live · EdTech</span
+                >
+                <a
+                  href="https://zptraining.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit zptraining.com"
+                  class="text-slate-500 transition hover:text-cyan-700"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                zptraining.com
+              </h3>
+              <p class="text-sm text-cyan-700/80">
+                Educational Course Learning Platform
+              </p>
+              <p class="mt-4 flex-1 leading-relaxed text-slate-600">
+                Learning management system supporting course delivery, progress
+                tracking and certification — PHP/Laravel backend and APIs with a
+                responsive Next.js/TypeScript frontend.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                <span class="rounded bg-slate-100 px-2 py-1">PHP</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Laravel</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Next.js</span
+                ><span class="rounded bg-slate-100 px-2 py-1">TypeScript</span>
+              </div>
+              <a
+                href="https://zptraining.com"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >Visit site <span aria-hidden="true">→</span></a
+              >
+            </article>
+
+            <article class="card reveal flex flex-col rounded-2xl p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-indigo-400/10 px-3 py-1 text-xs font-semibold text-indigo-700"
+                  >Live · EdTech</span
+                >
+                <a
+                  href="https://learnigh.mobileacademy.ng"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Visit learnigh.mobileacademy.ng"
+                  class="text-slate-500 transition hover:text-cyan-700"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                learnigh.mobileacademy.ng
+              </h3>
+              <p class="text-sm text-cyan-700/80">Student CAT Study Platform</p>
+              <p class="mt-4 flex-1 leading-relaxed text-slate-600">
+                Platform for educational assessments and study resources,
+                delivering reliable data management and end-to-end web
+                application development.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                <span class="rounded bg-slate-100 px-2 py-1">React.js</span
+                ><span class="rounded bg-slate-100 px-2 py-1">TypeScript</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Zustand</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Laravel</span
+                ><span class="rounded bg-slate-100 px-2 py-1">MySQL</span>
+              </div>
+              <a
+                href="https://learnigh.mobileacademy.ng"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >Visit site <span aria-hidden="true">→</span></a
+              >
+            </article>
+          </div>
+
+          <!-- Open source -->
+          <h3
+            class="reveal mt-16 flex items-center gap-3 text-lg font-semibold text-slate-900"
+          >
+            <span class="h-2 w-2 rounded-full bg-amber-400"></span> Open source
+            &amp; coursework
+          </h3>
+          <div class="mt-6 grid gap-6 md:grid-cols-2">
+            <article class="card reveal flex flex-col rounded-2xl p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-700"
+                  >Open source · MSc Coursework</span
+                >
+                <a
+                  href="https://github.com/itz-kamal/lensvault"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LensVault on GitHub"
+                  class="text-slate-500 transition hover:text-cyan-700"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">LensVault</h3>
+              <p class="text-sm text-cyan-700/80">
+                Camera Equipment Rental Platform
+              </p>
+              <p class="mt-4 leading-relaxed text-slate-600">
+                Full-stack rental platform for cameras, lenses, drones and
+                lighting. Customers browse by category, book rentals with date
+                and stock validation, and track active and returned rentals.
+                Admin dashboard with live statistics, overdue-rental tracking
+                and user and support management.
+              </p>
+              <p class="mt-3 flex-1 text-sm leading-relaxed text-slate-500">
+                <span class="text-emerald-700">Secure by design:</span> bcrypt
+                password hashing, prepared statements against SQL injection,
+                session ID regeneration on login and file-type checks on image
+                uploads.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                <span class="rounded bg-slate-100 px-2 py-1">OOP PHP</span
+                ><span class="rounded bg-slate-100 px-2 py-1">MySQL</span
+                ><span class="rounded bg-slate-100 px-2 py-1">Fetch API</span
+                ><span class="rounded bg-slate-100 px-2 py-1"
+                  >Tailwind CSS</span
+                >
+              </div>
+              <a
+                href="https://github.com/itz-kamal/lensvault"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >View on GitHub <span aria-hidden="true">→</span></a
+              >
+            </article>
+
+            <article class="card reveal flex flex-col rounded-2xl p-7">
+              <div class="flex items-center justify-between">
+                <span
+                  class="rounded-full bg-amber-400/10 px-3 py-1 text-xs font-semibold text-amber-700"
+                  >Open source · HealthTech</span
+                >
+                <a
+                  href="https://github.com/itz-kamal/safedose"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="SafeDose on GitHub"
+                  class="text-slate-500 transition hover:text-cyan-700"
+                >
+                  <svg
+                    class="h-5 w-5"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"
+                    />
+                  </svg>
+                </a>
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">SafeDose</h3>
+              <p class="text-sm text-cyan-700/80">Pharmacy Inventory System</p>
+              <p class="mt-4 flex-1 leading-relaxed text-slate-600">
+                Pharmacy inventory management system for tracking medicines,
+                stock levels and inventory records, with a focus on efficient
+                inventory management and reliable data handling.
+              </p>
+              <div class="mt-5 flex flex-wrap gap-2 font-mono text-xs">
+                <span class="rounded bg-slate-100 px-2 py-1">PHP</span
+                ><span class="rounded bg-slate-100 px-2 py-1">MySQL</span
+                ><span class="rounded bg-slate-100 px-2 py-1">JavaScript</span
+                ><span class="rounded bg-slate-100 px-2 py-1">AJAX</span
+                ><span class="rounded bg-slate-100 px-2 py-1">HTML/CSS</span>
+              </div>
+              <a
+                href="https://github.com/itz-kamal/safedose"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >View on GitHub <span aria-hidden="true">→</span></a
+              >
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EXPERIENCE ============ -->
+      <section
+        id="experience"
+        class="border-t border-slate-200 bg-slate-50 py-24"
+      >
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal">
+            <p class="font-mono text-sm text-cyan-600">02 · Experience</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Where I've worked
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 lg:grid-cols-5">
+            <!-- Main role -->
+            <div class="card reveal rounded-2xl p-7 lg:col-span-3">
+              <div class="flex flex-wrap items-start justify-between gap-2">
+                <div>
+                  <h3 class="text-xl font-semibold text-slate-900">
+                    Full Stack Developer
+                  </h3>
+                  <p class="text-cyan-700">Kallif IT Solution · Lagos</p>
+                </div>
+                <span
+                  class="rounded-full bg-slate-100 px-3 py-1 font-mono text-xs text-slate-600"
+                  >Jul 2023 – Aug 2025</span
+                >
+              </div>
+              <ul class="mt-5 space-y-2.5 text-slate-600">
+                <li class="flex gap-3">
+                  <span
+                    class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-cyan-400"
+                  ></span
+                  >Shipped secure payment gateway integrations and multi-login
+                  prevention on live platforms, protecting revenue.
+                </li>
+                <li class="flex gap-3">
+                  <span
+                    class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-cyan-400"
+                  ></span
+                  >Built REST APIs and full stack features in PHP/Laravel,
+                  C#/.NET, TypeScript and Node.js.
+                </li>
+                <li class="flex gap-3">
+                  <span
+                    class="mt-2 h-1.5 w-1.5 flex-none rounded-full bg-cyan-400"
+                  ></span
+                  >Set up CI/CD with GitHub Actions and worked across the full
+                  Scrum lifecycle, including code review.
+                </li>
+              </ul>
+            </div>
+
+            <!-- Earlier roles -->
+            <div class="card reveal rounded-2xl p-7 lg:col-span-2">
+              <h3
+                class="font-mono text-xs uppercase tracking-wider text-slate-500"
+              >
+                Earlier
+              </h3>
+              <ul class="mt-5 space-y-5">
+                <li>
+                  <div
+                    class="flex flex-wrap items-baseline justify-between gap-x-3"
+                  >
+                    <p class="font-semibold text-slate-900">
+                      Front End Developer Intern
+                    </p>
+                    <span class="font-mono text-xs text-slate-500"
+                      >2020 – 2021</span
+                    >
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    Payscribe · Responsive UI and API integration
+                  </p>
+                </li>
+                <li>
+                  <div
+                    class="flex flex-wrap items-baseline justify-between gap-x-3"
+                  >
+                    <p class="font-semibold text-slate-900">
+                      Undergraduate Researcher
+                    </p>
+                    <span class="font-mono text-xs text-slate-500"
+                      >2022 – 2023</span
+                    >
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    University of Lagos · Data analysis and thesis research
+                  </p>
+                </li>
+                <li>
+                  <div
+                    class="flex flex-wrap items-baseline justify-between gap-x-3"
+                  >
+                    <p class="font-semibold text-slate-900">
+                      Engineering Intern
+                    </p>
+                    <span class="font-mono text-xs text-slate-500">2021</span>
+                  </div>
+                  <p class="text-sm text-slate-600">
+                    Agata Limited · Process control and instrumentation
+                  </p>
+                </li>
+              </ul>
+              <a
+                href="assets/Kamaldeen_Ojure_CV.pdf"
+                download
+                class="mt-6 inline-flex items-center gap-1.5 text-sm font-semibold text-cyan-700 hover:text-cyan-800"
+                >Full details in my CV <span aria-hidden="true">↓</span></a
+              >
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ SKILLS ============ -->
+      <section id="skills" class="border-t border-slate-200 bg-slate-50 py-24">
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal">
+            <p class="font-mono text-sm text-cyan-600">03 · Skills</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Technical toolkit
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-cyan-400/10 text-cyan-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">
+                Languages &amp; Frameworks
+              </h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1">PHP</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">Laravel</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >C# / .NET</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >TypeScript</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">Next.js</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">Node.js</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >React.js</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">Python</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">pandas</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">SciPy</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Matplotlib</span
+                >
+              </div>
+            </div>
+
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-emerald-400/10 text-emerald-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9 12l2 2 4-4m5.62-4.02A11.95 11.95 0 0112 2.94a11.95 11.95 0 01-8.62 3.04A12.02 12.02 0 003 9c0 5.59 3.82 10.29 9 11.62 5.18-1.33 9-6.03 9-11.62 0-1.04-.13-2.05-.38-3.02z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Cyber Security</h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Vulnerability management</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Risk-based patch prioritisation</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">CVSS</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">EPSS</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >CISA KEV</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">NVD</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Secure development</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Authentication</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Payment security</span
+                >
+              </div>
+            </div>
+
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-indigo-400/10 text-indigo-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 4v5h.58m15.36 2A8 8 0 004.58 9m0 0H9m11 11v-5h-.58m0 0a8 8 0 01-15.36-2m15.36 2H15"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">CI/CD &amp; DevOps</h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1">Git</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">GitHub</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >GitHub Actions</span
+                >
+              </div>
+            </div>
+
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-amber-400/10 text-amber-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M4 7c0-1.66 3.58-3 8-3s8 1.34 8 3-3.58 3-8 3-8-1.34-8-3zm0 0v10c0 1.66 3.58 3 8 3s8-1.34 8-3V7M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Databases</h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1">MySQL</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">MongoDB</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Firebase</span
+                >
+              </div>
+            </div>
+
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-pink-400/10 text-pink-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M9.75 17L9 20l-1 1h8l-1-1-.75-3M3 13h18M5 17h14a2 2 0 002-2V5a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">Frontend</h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1">HTML</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">CSS</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >JavaScript</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">AJAX</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Tailwind CSS</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1">Zustand</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Responsive UI</span
+                >
+              </div>
+            </div>
+
+            <div class="card reveal rounded-2xl p-6">
+              <div
+                class="mb-4 grid h-11 w-11 place-items-center rounded-xl bg-sky-400/10 text-sky-700"
+              >
+                <svg
+                  class="h-6 w-6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M17 20h5v-2a3 3 0 00-5.36-1.86M17 20H7m10 0v-2c0-.66-.13-1.28-.36-1.86M7 20H2v-2a3 3 0 015.36-1.86M7 20v-2c0-.66.13-1.28.36-1.86m0 0a5 5 0 019.28 0M15 7a3 3 0 11-6 0 3 3 0 016 0z"
+                  />
+                </svg>
+              </div>
+              <h3 class="font-semibold text-slate-900">
+                Delivery &amp; Collaboration
+              </h3>
+              <div class="mt-4 flex flex-wrap gap-2 text-sm">
+                <span class="rounded-md bg-slate-100 px-2.5 py-1">Scrum</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Agile delivery</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >Code review</span
+                ><span class="rounded-md bg-slate-100 px-2.5 py-1"
+                  >REST APIs</span
+                >
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ EDUCATION ============ -->
+      <section
+        id="education"
+        class="border-t border-slate-200 bg-slate-50 py-24"
+      >
+        <div class="mx-auto max-w-6xl px-6">
+          <div class="reveal">
+            <p class="font-mono text-sm text-cyan-600">04 · Education</p>
+            <h2 class="mt-3 text-3xl font-bold text-slate-900 sm:text-4xl">
+              Academic background
+            </h2>
+          </div>
+
+          <div class="mt-12 grid gap-6 md:grid-cols-2">
+            <div class="card reveal rounded-2xl p-7">
+              <div class="flex items-start justify-between gap-3">
+                <div
+                  class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-gradient-to-br from-cyan-400/20 to-indigo-500/20 text-cyan-700"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M12 14l9-5-9-5-9 5 9 5z" />
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M12 14l6.16-3.42A12.08 12.08 0 0118.8 17.5 11.95 11.95 0 0012 20.06a11.95 11.95 0 00-6.8-2.56 12.08 12.08 0 01.64-6.92L12 14z"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="rounded-full bg-slate-100 px-3 py-1 font-mono text-xs text-slate-600"
+                  >Sept 2025 – Dec 2026</span
+                >
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                MSc, IT with Cyber Security
+              </h3>
+              <p class="text-cyan-700">Robert Gordon University, Scotland</p>
+              <span
+                class="mt-3 inline-block rounded-full bg-emerald-400/10 px-3 py-1 text-xs font-semibold text-emerald-700"
+                >Distinction</span
+              >
+              <p class="mt-4 text-sm leading-relaxed text-slate-600">
+                <span class="text-slate-700">Dissertation:</span> Vulnerability
+                Disclosure Timeline Analysis — Time-to-Patch vs Exploitation
+                Risk.
+              </p>
+            </div>
+
+            <div class="card reveal rounded-2xl p-7">
+              <div class="flex items-start justify-between gap-3">
+                <div
+                  class="grid h-12 w-12 flex-none place-items-center rounded-xl bg-slate-100 text-slate-700"
+                >
+                  <svg
+                    class="h-6 w-6"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                  >
+                    <path
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      d="M19.43 15.43a2 2 0 00-1.02-.55l-2.39-.48a6 6 0 00-3.86.52l-.32.16a6 6 0 01-3.86.52l-1.93-.39a2 2 0 00-1.8.55M8 4h8l-1 1v5.17a2 2 0 00.59 1.42l5 5c1.26 1.26.37 3.41-1.42 3.41H4.83c-1.79 0-2.68-2.15-1.42-3.41l5-5A2 2 0 009 10.17V5L8 4z"
+                    />
+                  </svg>
+                </div>
+                <span
+                  class="rounded-full bg-slate-100 px-3 py-1 font-mono text-xs text-slate-600"
+                  >Dec 2016 – Sept 2023</span
+                >
+              </div>
+              <h3 class="mt-5 text-xl font-bold text-slate-900">
+                BSc, Chemical Engineering
+              </h3>
+              <p class="text-cyan-700">University of Lagos, Akoka, Lagos</p>
+              <p class="mt-4 text-sm leading-relaxed text-slate-600">
+                Engineering foundation in process control, systems thinking and
+                quantitative analysis — the same rigour I now apply to software
+                and security.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ============ CONTACT ============ -->
+      <section
+        id="contact"
+        class="relative overflow-hidden border-t border-slate-200 py-24"
+      >
+        <div
+          class="pointer-events-none absolute bottom-0 left-1/2 h-80 w-[700px] -translate-x-1/2 rounded-full bg-indigo-500/10 blur-3xl"
+        ></div>
+        <div class="relative mx-auto max-w-3xl px-6 text-center">
+          <div class="reveal">
+            <p class="font-mono text-sm text-cyan-600">05 · Contact</p>
+            <h2 class="mt-3 text-4xl font-bold text-slate-900 sm:text-5xl">
+              Let's build something secure
+            </h2>
+            <p class="mx-auto mt-5 max-w-xl text-lg text-slate-600">
+              I'm open to full stack, application security and software
+              engineering roles. Whether you have a role, a project or just a
+              question, my inbox is open.
+            </p>
+            <div class="mt-10 flex flex-wrap justify-center gap-4">
+              <a
+                href="mailto:kamalojure@gmail.com"
+                class="inline-flex items-center gap-2 rounded-lg bg-slate-900 px-6 py-3 font-semibold text-white shadow-lg shadow-cyan-500/20 transition hover:opacity-90"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M3 8l9 6 9-6M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"
+                  />
+                </svg>
+                Say hello
+              </a>
+              <a
+                href="assets/Kamaldeen_Ojure_CV.pdf"
+                download
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-100 px-6 py-3 font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-200"
+              >
+                <svg
+                  class="h-5 w-5"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    d="M12 4v12m0 0l-4-4m4 4l4-4M4 20h16"
+                  />
+                </svg>
+                Download CV
+              </a>
+              <a
+                href="https://github.com/itz-kamal"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="inline-flex items-center gap-2 rounded-lg border border-slate-300 bg-slate-100 px-6 py-3 font-semibold text-slate-900 transition hover:border-slate-400 hover:bg-slate-200"
+              >
+                GitHub
+              </a>
+            </div>
+            <p class="mt-10 text-sm text-slate-500">
+              Aberdeen, UK · References available on request
+            </p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="border-t border-slate-200 py-8">
+      <div
+        class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 text-sm text-slate-500 sm:flex-row"
+      >
+        <p>© <span id="year"></span> Kamaldeen Ojure. All rights reserved.</p>
+        <a href="#home" class="transition hover:text-cyan-700">Back to top ↑</a>
+      </div>
+    </footer>
+
+    <script>
+      // Footer year
+      document.getElementById("year").textContent = new Date().getFullYear();
+
+      // Mobile menu
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () => {
+        const open = mobileMenu.classList.toggle("hidden") === false;
+        menuBtn.setAttribute("aria-expanded", open);
+      });
+      mobileMenu
+        .querySelectorAll("a")
+        .forEach((a) =>
+          a.addEventListener("click", () => mobileMenu.classList.add("hidden")),
+        );
+
+      // Navbar background on scroll
+      const navbar = document.getElementById("navbar");
+      const onScroll = () => {
+        navbar.classList.toggle("bg-white/80", window.scrollY > 20);
+        navbar.classList.toggle("backdrop-blur-md", window.scrollY > 20);
+        navbar.classList.toggle("border-b", window.scrollY > 20);
+        navbar.classList.toggle("border-slate-200", window.scrollY > 20);
+      };
+      window.addEventListener("scroll", onScroll, { passive: true });
+      onScroll();
+
+      // Reveal on scroll
+      const io = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              e.target.classList.add("visible");
+              io.unobserve(e.target);
+            }
+          });
+        },
+        { threshold: 0.12 },
+      );
+      document.querySelectorAll(".reveal").forEach((el) => io.observe(el));
+
+      // Active nav link
+      const sections = document.querySelectorAll("main section[id]");
+      const links = document.querySelectorAll(".nav-link");
+      const navIO = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((e) => {
+            if (e.isIntersecting) {
+              links.forEach((l) =>
+                l.classList.toggle(
+                  "active",
+                  l.getAttribute("href") === "#" + e.target.id,
+                ),
+              );
+            }
+          });
+        },
+        { rootMargin: "-45% 0px -50% 0px" },
+      );
+      sections.forEach((s) => navIO.observe(s));
+    </script>
+  </body>
+</html>
